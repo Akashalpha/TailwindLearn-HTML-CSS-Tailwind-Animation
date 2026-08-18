@@ -1,0 +1,115 @@
+ body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        ::selection {
+            background: #0ea5e9;
+            color: white;
+        }
+        /* Smooth transitions */
+
+    *{
+        transition-property: color,
+                             background-color,
+                             border-color,
+                             transform,
+                             box-shadow;
+        transition-duration: .3s;
+    }
+
+    /* Nice scrollbar */
+
+    ::-webkit-scrollbar{
+        width:10px;
+    }
+
+    ::-webkit-scrollbar-track{
+        background:#e2e8f0;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background:#0284c7;
+        border-radius:20px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover{
+        background:#0369a1;
+    }
+
+    /* Floating animation */
+
+    @keyframes float{
+
+        0%{
+            transform:translateY(0);
+        }
+
+        50%{
+            transform:translateY(-10px);
+        }
+
+        100%{
+            transform:translateY(0);
+        }
+
+    }
+
+    .floating{
+        animation:float 4s ease-in-out infinite;
+    }
+
+    /* Gradient Text */
+
+    .gradient-text{
+
+        background:linear-gradient(90deg,#0ea5e9,#2563eb);
+
+        -webkit-background-clip:text;
+
+        -webkit-text-fill-color:transparent;
+
+        background-clip:text;
+
+    }
+
+    /* Hover Lift */
+
+    .hover-card:hover{
+
+        transform:translateY(-8px);
+
+        box-shadow:0 25px 45px rgba(0,0,0,.12);
+
+    }
+    body{
+
+    animation: blurReveal 1s ease;
+
+}
+
+@keyframes blurReveal{
+
+    from{
+
+        opacity:0;
+        filter:blur(12px);
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        filter:blur(0);
+        transform:translateY(0);
+
+    }
+
+}
+    iframe{
+        
+        border-radius:40px;
+        background-color: transparent;    }
+    iframe:hover{
+        background-color: rgb(3, 105, 161);
+    }
